@@ -55,7 +55,7 @@ Each analysis was built on a separate Excel sheet, with a pivot table and chart:
 ---
 
 ## 🏁 Outcome
-A **fully cleaned, analyzed, and visualized** dataset — ready for reporting and dashboard creation.  
+A **fully cleaned, analyzed, and visualized** dataset — ready for reporting. 
 This project demonstrates strong Excel data cleaning, transformation, and pivot-based visualization skills.
 
 ---
