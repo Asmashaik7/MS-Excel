@@ -1,65 +1,67 @@
-# 🧹 Data Cleaning & Analysis – Global Superstore Dataset
+# 📊 Global Superstore — Data Cleaning & Analysis (Excel)
 
-## 📁 Project Overview
-This project focuses on **data cleaning, transformation, and analysis** of the *Global Superstore* dataset using **Microsoft Excel**.  
-The dataset contains **51,290 rows** and **24 columns**, covering sales, profit, order, and shipment details across regions.
+## 📁 Project Overview  
+This project focuses on **end-to-end data cleaning, transformation, and business analysis** of the Global Superstore dataset using Microsoft Excel.  
 
----
-
-## 🧼 Data Cleaning Process
-**Tools Used:** Excel Power Query & Excel Functions  
-
-1. **Loaded raw CSV file (GlobalSuperstore.csv)** into Power Query.  
-2. **Fixed inconsistent date formats**  
-   - Original issue: Dates appeared in mixed styles (`/` and `-`) and different locales.  
-   - Solution: Replaced `-` with `/`, changed locale to *English (United States)*, and converted data type to *Date*.  
-3. **Removed errors & nulls** from invalid date and numeric fields.  
-4. **Standardized Data Types**  
-   - `Order Date`, `Ship Date` → Date  
-   - `Sales`, `Profit`, `Discount` → Decimal Number  
-   - `Order ID`, `Customer Name`, `Region`, etc. → Text  
-5. **Created Calculated Columns**
-   - **Delivery Days** = Ship Date − Order Date  
-   - **Profit Margin** = Profit / Sales  
-6. **Formatted Profit Margin as Percentage (%)** for better readability.  
-7. **Loaded cleaned data** back to Excel for analysis.
+The dataset contains **51,290 rows and 24 columns**, covering sales, profit, orders, and shipping details across multiple global regions (2011–2015).
 
 ---
 
-## 🚚 Data Challenges & Solutions
-| Challenge | Root Cause | Solution |
-|------------|-------------|-----------|
-| Date column not showing hierarchy | Mixed formats (`/` & `-`) and locale mismatch | Replaced symbols and set locale to English (US) before changing to Date type |
-| Power Query showing errors after type conversion | Locale applied *after* type change | Corrected order: Replace symbols → Set locale → Change data type |
-| Large file restarting or lagging | 51k+ rows with multiple pivot operations | Used a fresh workbook for clean data |
-| Profit Margin not converting to % | Excel treated it as text | Re-created column and formatted as Percentage |
-| Understanding shipping performance | Needed numeric comparison | Created Delivery Days column for analysis |
+## 📊 Dashboard Preview  
+
+![Dashboard](dashboard.png)
 
 ---
 
-## 📊 Analysis Performed (Pivot Tables + Charts)
-Each analysis was built on a separate Excel sheet, with a pivot table and chart:
-1. **Sales by Region** – Compared total sales across regions  
-2. **Sales by Category** – Identified top-performing product categories  
-3. **Average Delivery Days by Order Priority** – Measured delivery efficiency  
-4. **Profit Margin by Region** – Evaluated regional profitability  
-5. **Monthly Sales Trend** – Visualized seasonality and growth pattern  
+## 🛠️ Tools Used  
+- Microsoft Excel (Pivot Tables, Charts, Dashboard Design)  
+- Power Query (Data Cleaning & Transformation)  
+- Excel Functions (IFERROR, SUMIFS, COUNTIFS)  
 
 ---
 
-## 💡 Key Insights
-- Some *High-Priority* orders still took longer than expected to deliver.  
-- Certain regions contributed higher sales but lower profit margins.  
-- Seasonal peaks were visible in monthly sales trends.  
+## 🧹 Data Cleaning Process  
+- Imported raw CSV data into Power Query  
+- Fixed inconsistent date formats (`-` and `/`) and standardized locale  
+- Converted columns to appropriate data types  
+- Removed null values and errors  
+- Created calculated columns:  
+  - **Delivery Days = Ship Date − Order Date**  
+  - **Profit Margin = Profit / Sales (handled using IFERROR)**  
+- Formatted Profit Margin as Percentage (%)  
+- Loaded cleaned dataset into Excel for analysis  
 
 ---
 
-## 🏁 Outcome
-A **fully cleaned, analyzed, and visualized** dataset — ready for reporting. 
-This project demonstrates strong Excel data cleaning, transformation, and pivot-based visualization skills.
+## 📊 Analysis Performed  
+- Sales by Region  
+- Sales by Category  
+- Profit by Category  
+- Profit Margin by Region  
+- Delivery Performance by Order Priority  
+- Monthly Sales Trend  
+- Sales by Ship Mode  
 
 ---
 
-## 👩‍💻 Author
+## 💡 Key Insights  
+- **Central region dominates sales (~23%)**, indicating dependency on a single region  
+- **Technology leads category sales**, but profitability varies across categories  
+- **Africa and EMEA are loss-making regions**, despite generating sales  
+- **Overall profit margin is low (~4.7%)**, highlighting inefficiencies  
+- **Sales show strong seasonality**, with peak performance in Q4  
+- **Standard shipping dominates (61%)**, indicating cost-sensitive customers  
+
+---
+
+## 🏁 Outcome  
+Built a complete Excel-based analytics project that includes:  
+- Cleaned and structured dataset  
+- Business insights using pivot tables  
+- Dashboard-style visualizations for decision-making  
+
+---
+
+## 👤 Author  
 **Asma Shaik**  
-*Data Analyst (Power BI | Excel | SQL | Python)*  
+Data Analyst | Excel | SQL | Power BI | Python  
